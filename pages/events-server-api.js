@@ -14,7 +14,7 @@
 
 export const getServerSideProps = async(context) => {
     try {
-        const res = await fetch('/api/all-events');
+        const res = await fetch('api/all-events');
         const events = await res.json()
     
 
