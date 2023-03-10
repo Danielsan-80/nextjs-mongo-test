@@ -14,11 +14,11 @@
 
 export const getStaticProps = async(context) => {
 
-    const nodeEnv = process.env.NODE_ENV
+    // const nodeEnv = process.env.NODE_ENV
 
-    const url = nodeEnv === 'development' ? 'http://localhost:3000' : process.env.NEXT_PUBLIC_VERCEL_URL
+    // const url = nodeEnv === 'development' ? 'http://localhost:3000' : process.env.NEXT_PUBLIC_VERCEL_URL
     try {
-        const res = await fetch(url + '/api/all-events');
+        const res = await fetch('https://' + process.env.NEXT_PUBLIC_VERCEL_URL + '/api/all-events');
         const events = await res.json()
     
 
