@@ -15,7 +15,7 @@
 export const getServerSideProps = async(context) => {
     try {
         const nodeEnv = process.env.NODE_ENV
-        const url = nodeEnv === 'development' ? process.env.DEV_URL : process.env.PROD_URL
+        const url = nodeEnv === 'development' ? process.env.DEV_URL : 'https://' + process.env.PROD_URL
         const res = await fetch(url + '/api/all-events');
         const events = await res.json()
     
