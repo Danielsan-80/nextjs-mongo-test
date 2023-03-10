@@ -14,7 +14,7 @@
 
 export const getServerSideProps = async(context) => {
     try {
-        const res = await fetch('https://' + process.env.NEXT_PUBLIC_VERCEL_URL + '/api/all-events');
+        const res = await fetch('https://' + NEXT_PUBLIC_VERCEL_URL + '/api/all-events');
         const events = await res.json()
     
 
