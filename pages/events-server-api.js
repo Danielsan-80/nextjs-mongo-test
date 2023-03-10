@@ -14,9 +14,7 @@
 
 export const getServerSideProps = async(context) => {
     try {
-        const nodeEnv = process.env.NODE_ENV
-        const url = nodeEnv === 'development' ? 'http://localhost:3000' : process.env.NEXT_PUBLIC_VERCEL_URL
-        const res = await fetch(url + '/api/all-events');
+        const res = await fetch('/api/all-events');
         const events = await res.json()
     
 
