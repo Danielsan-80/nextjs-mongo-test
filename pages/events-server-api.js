@@ -1,17 +1,5 @@
 
 
-// export const getServerSideProps = async (context)=>{
-//     const res = await fetch('http://localhost:3000/api/all-events')
-//     const events = await res.json()
-
-//     return {
-//         props: {
-//             data: events
-//         }
-//     }
-
-// }
-
 export const getServerSideProps = async(context) => {
 
     const url = process.env.NODE_ENV === "development" ? process.env.NEXT_PUBLIC_SITE_URL : 'https://'+ process.env.NEXT_PUBLIC_VERCEL_URL
