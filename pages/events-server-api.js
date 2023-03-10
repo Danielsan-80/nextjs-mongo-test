@@ -13,8 +13,11 @@
 // }
 
 export const getServerSideProps = async(context) => {
+
+    const url = process.env.NODE_ENV === "development" ? process.env.NEXT_PUBLIC_SITE_URL : 'https://'+ process.env.NEXT_PUBLIC_VERCEL_URL
+
     try {
-        const res = await fetch('https://nextjs-mongo-test-nu.vercel.app/api/all-events');
+        const res = await fetch(url + '/api/all-events');
         const events = await res.json()
     
 
