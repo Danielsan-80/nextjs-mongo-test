@@ -43,7 +43,7 @@ const EventsStatic = ({data}) => {
     <div>
     {data.map(event=> (
         <li key={event._id}>
-            <a href={"http://localhost:3000/events/" + event.id}>
+            <a href={"/events/" + event.id}>
             <h1>{event.title}</h1>
             <p>{event.city}</p>
             <p>{event.description}</p>
